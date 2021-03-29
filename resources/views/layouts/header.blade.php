@@ -8,6 +8,7 @@
         <li><a href="#">COMPANY</a></li>
         <li><a href="#">CONTACT</a></li>
         <li><a href="news.php">NEWS</a></li>
+        <li><a href="{{ route('register')}}">REGISTER</a></li>
     </ul>
 </nav>
 <nav class="pc-nav2">
@@ -20,9 +21,25 @@
     </ul>
 </nav>
 <div class="sign-in-block1">
-    <div class="sign-in-block2">
-        <a href="PHP/index.php"><span><div>LOG OUT</div></span></a>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Dashboard') }}</div>
+
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    {{ __('You are logged in!') }}
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 </div>
 <div class="flexbox">
     <h1></h1>

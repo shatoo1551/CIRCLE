@@ -5,29 +5,45 @@
             <h1></h1> 
             <p><strong>Please Log In!!!</strong></p>
             <!-- サインインしたいとき -->
-            <form action="{{ route('register') }}" method="post" id = "signUpForm" >
+            <form action="{{ route('register')}}" method="post" id = "signUpForm" >
                 <p>興味ある？</p>
                 <!--fieldsetはフォームや入力コントロールの内容をまとめる。情報の入力欄を作成できる。-->
                 <fieldset class="form-group">
-                    <input class="form-control" type="mail" name="mail" placeholder="Your Email">
+                    <input class="form-control" type="email" name="email" placeholder="Your Email">
                 </fieldset>
                 <fieldset class="form-group">
                     <input class="form-control" type="password" name="password" placeholder="Password">
                 </fieldset>
                 <fieldset class="form-group">
-                    <input class="form-control" type="text" name="name" placeholder="IDname">
+                    <input class="form-control" type="text" name="name" placeholder="name">
                 </fieldset>
                 <fieldset class="form-group">
-                    <input class="form-control" type="text" name="goal" placeholder="IDname">
+                    <div class="col-md-10">
+                        <label for="inputState" class="form-label">Skill</label>
+                        <select id="inputState" class="form-select" value="Goal">
+                        <option selected>Choose...</option>
+                        @foreach ($Skillcategories as $Skillcategory)
+                            <option class="form-control" value="{{ $Skillcategory -> id}}" name = "category_id">{{$Skillcategory -> skill_name}} {{$Skillcategory -> skill_level}}</option>
+                        @endforeach
+                        </select>
+                    </div>
                 </fieldset>
                 <fieldset class="form-group">
-                    <input class="form-control" type="text" name="dream" placeholder="IDname">
+                    <div class="col-md-10">
+                        <label for="inputState" class="form-label">Goal</label>
+                        <select id="inputState" class="form-select" value="Goal">
+                        <option selected>Choose...</option>
+                        @foreach ($Skillcategories as $Skillcategory)
+                            <option class="form-control"  value="{{ $Skillcategory -> id}}" name = "category_id" >{{$Skillcategory -> skill_name}} {{$Skillcategory -> skill_level}}</option>
+                        @endforeach
+                        </select>
+                    </div>
                 </fieldset>
                 <fieldset class="form-group">
-                    <input class="form-control" type="text" name="profile" placeholder="IDname">
+                    <textarea class="form-control" type="text" name="profile-value" placeholder="profile"></textarea>
                 </fieldset>
                 <fieldset class="form-group">
-                    <input class="form-control" type="text" name="" placeholder="IDname">
+                    <input class="form-control" type="text" name="dream" placeholder="dream">
                 </fieldset>
                 <div class="checkbox">
                     <label>
