@@ -20,6 +20,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'goal',
+        'dream',
+        'profile-value',
+        'skillcategory_id',
     ];
 
     /**
@@ -40,4 +44,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function category(){
+        return $this->belongsTo("App\Models\Category");
+    }
+
 }

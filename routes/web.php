@@ -1,6 +1,7 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
+use App\Models\Skillcategory;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,12 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/register', function () {
+    $Skillcategories=Skillcategory::get();
+    return view('register')->with([
+    'Skillcategories' => $Skillcategories,
+    ]);
+})->name('register');
+
 Route::get('/', function () {
-    return view('login');
-});
+    $Skillcategories=Skillcategory::get();
+    return view('home')->with([
+    'Skillcategories' => $Skillcategories,
+    ]);
+})->name('home');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
