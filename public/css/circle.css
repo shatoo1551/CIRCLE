@@ -1,0 +1,250 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: darkslategray;
+    letter-spacing : 0.2em;
+    height: auto;
+}
+header {
+    padding: 30px 4% 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+h1 {
+    margin: 0; padding: 0;
+    font-size: 20px;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+.nav1{
+    margin: 0 0 0 auto;
+}
+.nav2 {
+    margin: 0 0 0 auto;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+}
+li {
+    margin: 0 0 0 15px;
+    font-size: 14px;
+}
+.main-visual {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: darkslategray;
+}
+h2 {
+margin: 0;
+font-size: 30px;
+font-weight: normal;
+color: #fff;
+}
+.flowbtn10 .fa-twitter:hover{
+color:#55acee;
+}
+.flowbtn10 .fa-instagram:hover{
+    color:#c6529a;
+    }
+.flowbtn10 .fa-facebook-f:hover{
+    color:#3b5998;
+    }
+.flowbtn10 .fa-envelope:hover{
+    color:#f3981d;
+    }
+.flowbtn10 .fa-rss:hover{
+    color: aquamarine;
+}
+.sign-in-block1{
+text-align: center;
+float: right;
+position: relative;
+
+
+}
+.sign-in-block2{
+vertical-align: middle;
+position: relative;
+margin: auto; 
+text-align: center;
+padding-top: 5px;
+float: right;
+border: #fff solid ;
+border-radius: 1em;
+width: 150px;
+height: 100%;
+margin-left: 20px;
+}
+.sign-in-block2:hover{
+background-color: blanchedalmond;
+color: darkslategrey;
+}
+.sign-in-btn{
+border:solid  #fff;
+border-radius: 1em;
+}
+.slider{
+    margin: 100px auto;
+    width: 80%;
+}
+.slider img{
+    height: auto;
+    width: 100%;
+}
+/*slick setting*/
+.slick-prev:before,
+.slick-next:before {
+    color: #000;
+}
+footer{
+background-color: darkslategrey;
+height: 600px;
+}
+.footer1{
+height: 571px;
+padding-top: 100px;
+}
+.footer2{
+background-color:royalblue;
+height: 347px;
+
+}
+.footer3{
+height: 347px;
+background-color: skyblue;
+margin-right: 5%;
+margin-left: 5%;
+}
+.footer4{
+height: 347px;
+background-color:#b37aec;
+width: 25%;
+float: left;
+font-size: 24px;
+font-family: Helvetica;
+color: seashell;
+}
+.footer5{
+background-color: rgb(160, 206, 52);
+font-size: 16px;
+font-family: 'Courier New', Courier, monospace;
+}
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+* {
+font-family: Roboto, sans-serif;
+padding: 0;
+margin: 0;
+}
+html,body {
+width: 100%;
+height: 100%;
+}
+.flexbox {
+background: linear-gradient(155deg, transparent, transparent, transparent);
+background-color: transparent;
+height: 100px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: Roboto, sans-serif;
+padding: 0;
+color: seashell;
+}
+
+.search {
+margin-left: 10px;
+height: 50px;
+width: 50px;
+}
+.binoculas {
+margin-left: 10px;
+}
+.search > h3 {
+font-weight: normal;
+}
+.search > h1,
+.search > h3 {
+color: white;
+margin-bottom: 15px;
+text-shadow: 0 1px darkslategray;
+}
+.search > div {
+display: inline-block;
+position: relative;
+filter: drop-shadow(0 1px #0091c2);
+}
+.search > div:after {
+content: "";
+background: white;
+width: 4px;
+height: 20px;
+position: absolute;
+top: 40px;
+right: 2px;
+transform: rotate(135deg);
+}
+.search > div > input {
+color: white;
+font-size: 16px;
+background: transparent;
+height: 50px;
+width: 50px;
+padding: 10px;
+border: solid 3px white;
+outline: none;
+border-radius: 35px;
+transition: width 0.5s;
+}
+
+.search > div > input::placeholder {
+color: #efefef;
+opacity: 0;
+transition: opacity 150ms ease-out;
+}
+
+.search > div > input:focus::placeholder {
+opacity: 1;
+}
+
+.search > div > input:focus,
+.search > div > input:not(:placeholder-shown) {
+width: 250px;
+}
+.container {
+text-align: center;
+width: 400px;
+color:white;
+} 
+#homePageContainer {
+margin-top: 150px;   
+}
+#containerLoggedInPage {
+margin-top: 60px;
+}
+#logInForm {
+display:none;
+}
+.toggleForms {   
+font-weight: bold;
+}
+#diary {   
+width: 100%;
+height: 100%;
+}
+.toukou{
+color: black;
+} 
+.form-control{
+    color: #000;
+}
