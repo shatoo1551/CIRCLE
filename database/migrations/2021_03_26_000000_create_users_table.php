@@ -19,11 +19,11 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table -> text('goal',20);
-            $table -> text('dream',20);
             $table -> text('profile-value', 21845);
-            $table->bigInteger('category_id')->unsigned(); 
-            $table->foreign('category_id')->references('id')->on('skillcategories')->onDelete('cascade'); 
+            $table->bigInteger('skill_id')->unsigned(); 
+            $table->foreign('skill_id')->references('id')->on('skillcategories')->onDelete('cascade');
+            $table->bigInteger('goal_id')->unsigned(); 
+            $table->foreign('goal_id')->references('id')->on('skillcategories')->onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();
         });

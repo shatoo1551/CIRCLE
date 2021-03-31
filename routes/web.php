@@ -14,14 +14,7 @@ use App\Models\Skillcategory;
 |
 */
 
-Route::get('/register', function () {
-    $Skillcategories=Skillcategory::get();
-    return view('register')->with([
-    'Skillcategories' => $Skillcategories,
-    ]);
-})->name('register');
-
-Route::get('/', function () {
+Route::get('/home', function () {
     $Skillcategories=Skillcategory::get();
     return view('home')->with([
     'Skillcategories' => $Skillcategories,
